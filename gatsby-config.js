@@ -12,9 +12,39 @@ module.exports = {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+   
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
+    {
+
+      resolve: "gatsby-source-graphql",
+      
+      options: {
+      
+      typeName: "WPGraphql",
+      
+      fieldName: "wpcontent",
+      
+      url: "http://safri-agency.codobi.be/graphql",
+      
+      },
+       
+      },
+      `gatsby-transformer-sharp`,
+      `gatsby-plugin-sharp`,
+      {
+
+        resolve: `gatsby-plugin-google-fonts`,
+        
+        options: {
+        
+        fonts: [`Roboto`, `Oswald`],
+        
+        display: "swap",
+        
+        },
+        
+        }, 
+        `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
