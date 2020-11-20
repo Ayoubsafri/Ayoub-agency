@@ -5,15 +5,6 @@ module.exports = {
     author: `@gatsbyjs`,
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-   
-    },
     {
 
       resolve: "gatsby-source-graphql",
@@ -24,27 +15,21 @@ module.exports = {
       
       fieldName: "wpcontent",
       
-      url: "http://safri-agency.codobi.be/graphql",
+      url: "http://artist-agency.codobi.be/graphql",
       
       },
-       
+      
       },
-      `gatsby-transformer-sharp`,
-      `gatsby-plugin-sharp`,
-      {
-
-        resolve: `gatsby-plugin-google-fonts`,
-        
-        options: {
-        
-        fonts: [`Roboto`, `Oswald`],
-        
-        display: "swap",
-        
-        },
-        
-        }, 
-        `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
